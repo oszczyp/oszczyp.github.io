@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szczepan Kulasik - Portfolio</title>
+  <style>
+    /* Couleurs et polices */
+    :root {
+      --vert-pale: #a8d5ba;
+      --gris-fonce: #333;
+      --blanc: #fff;
+      --gris-clair: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--blanc);
+      color: var(--gris-fonce);
+    }
+
+    nav {
+      background-color: var(--vert-pale);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--gris-fonce);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: var(--vert-pale);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: var(--vert-pale);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--vert-pale);
+      display: flex;
+      align-items: center;
+      padding-bottom: 5px;
+    }
+
+    h2 img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: var(--gris-fonce);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--vert-pale);
+      margin-top: 40px;
+    }
+
+    /* Projets */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: var(--gris-clair);
+      border-radius: 10px;
+      padding: 15px;
+      flex: 1 1 calc(33% - 20px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    @media(max-width: 800px) {
+      .projects {
+        flex-direction: column;
+      }
+      .project-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#experience">Expérience</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Szczepan Kulasik</h1>
+    <p>Passionné d'informatique et de cybersécurité | Bachelier en Sciences Informatiques</p>
+  </header>
+
+  <section id="about">
+    <h2><img src="images/a_propos.jpeg" alt="À propos">À propos de moi</h2>
+    <p>Bonjour, je suis Szczepan, un professionnel passionné par l'informatique, la cybersécurité et la conception technique. J'aime transformer des idées en projets concrets, que ce soit via la programmation, la CAO ou l'électronique.</p>
+  </section>
+
+  <section id="skills">
+    <h2><img src="images/competences.jpeg" alt="Compétences">Compétences techniques</h2>
+    <ul>
+      <li>Langages : C, C++, Java</li>
+      <li>Systèmes d'exploitation : macOS, Linux, Windows, iOS, Android</li>
+      <li>CAO 3D : SolidWorks</li>
+      <li>Électronique : Arduino, Raspberry Pi</li>
+      <li>Impression 3D : Prototypage et pièces fonctionnelles</li>
+      <li>Microsoft Office : Word, Excel, PowerPoint, Outlook</li>
+      <li>Cybersécurité : en formation continue (Google Certificate)</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2><img src="images/experience.jpeg" alt="Expérience">Expérience professionnelle</h2>
+    <ul>
+      <li><strong>Post Luxembourg</strong> – Porteur de journaux (2024-2025)</li>
+      <li><strong>Deliveroo Belgique</strong> – Collaborateur indépendant (2019-2024)</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2><img src="https://via.placeholder.com/30?text=🛠️" alt="Projets">Projets</h2>
+    <div class="projects">
+      <!-- Projet 1 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Projet 1">
+        <h3>Projet 1 : Impression 3D</h3>
+        <p>Conception et impression de pièces 3D fonctionnelles pour prototypes et projets personnels.</p>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Projet 2">
+        <h3>Projet 2 : Arduino & Raspberry Pi</h3>
+        <p>Développement de petits projets électroniques utilisant Arduino et Raspberry Pi, incluant automatisation et capteurs.</p>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Projet 3">
+        <h3>Projet 3 : Cybersécurité</h3>
+        <p>Exploration et apprentissage des bases de la cybersécurité à travers le Google Cybersecurity Certificate et projets pratiques.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2><img src="https://via.placeholder.com/30?text=✉️" alt="Contact">Contact</h2>
+    <p class="contact">
+      Téléphone : <a href="tel:+32478066763">+32 478 06 67 63</a><br>
+      Email : <a href="mailto:szczepan.kulasik@gmail.com">szczepan.kulasik@gmail.com</a><br>
+      Localisation : Soleuvre, Luxembourg
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2026 Szczepan Kulasik
+  </footer>
+
+</body>
+</html>
